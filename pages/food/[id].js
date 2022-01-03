@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import Foods from ".";
 
 export const getStaticPaths = async () => {
@@ -26,6 +27,7 @@ export const getStaticProps = async (context) => {
 }
 
 const Details = ({food}) => {
+    const router = useRouter()
     return(
         <>
             <Foods food={food} />

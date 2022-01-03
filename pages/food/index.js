@@ -11,14 +11,14 @@ export default function Foods({ food }) {
           <Link  href={"/foods"} variant="primary">
             <FontAwesomeIcon className={Styles.backButton} icon={faArrowCircleLeft}  />
           </Link>
-          <Col xs={12} key={food.id}>
+          <Col xs={12} key={food?.id}>
               <Col className={Styles.detailImage}>
-                <Card.Img variant="top" src={food.get_image} />
+                <Card.Img variant="top" src={food?.get_image} />
               </Col>
             <Card className={Styles.DetailsfoodCart}>
               <Card.Body>
-                <Card.Title>{food.name}</Card.Title>
-                <Card.Text>{food.description}</Card.Text>
+                <Card.Title>{food?.name}</Card.Title>
+                <Card.Text>{food?.description}</Card.Text>
               </Card.Body>
             </Card>
           </Col>

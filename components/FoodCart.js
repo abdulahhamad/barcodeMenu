@@ -13,7 +13,7 @@ export default function FoodCart({ foods }) {
               <Col xs={6} lg={4}>
                 <Card className={Styles.foodCart} style={{ width: "18rem" }}>
                   <div className={Styles.image}>
-                    <Card.Img variant="top" src={food.get_image} />
+                    <Card.Img variant="top" src={food?.get_image} />
                   </div>
                   <Card.Body>
                     <Card.Title>{food.name}</Card.Title>
