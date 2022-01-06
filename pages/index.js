@@ -19,7 +19,7 @@ export default function Home({ categories }) {
           <Col md={6} className={styles.categoryBox}>
             <ul>
               {categories.map((category) => (
-                <Link href="/foods" key={category.id}>
+                <Link href={'/category/' + category.id } key={category.id}>
                 <li>
                   {category.name}
                 </li>
