@@ -2,7 +2,7 @@ import { useRouter } from 'next/router'
 import Foods from ".";
 
 export const getStaticPaths = async () => {
-    const res = await fetch(`https://mardood.pythonanywhere.com/api/v1.0/food`);
+    const res = await fetch(`https://mardood.pythonanywhere.com/api/v1.1/food`);
     const foods = await res.json();
 
     const paths = foods.map(food => {
@@ -18,7 +18,7 @@ export const getStaticPaths = async () => {
 }
 export const getStaticProps = async (context) => {
     const id = context.params.id
-    const res = await fetch(`https://mardood.pythonanywhere.com/api/v1.0/food/${id}`);
+    const res = await fetch(`https://mardood.pythonanywhere.com/api/v1.1/food/${id}`);
     const data = await res.json();
 
     return{

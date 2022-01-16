@@ -34,7 +34,7 @@ export default function Home({ categories }) {
 }
 export const getStaticProps = async () => {
   const res = await fetch(
-    `https://mardood.pythonanywhere.com/api/v1.0/categories/`
+    `https://mardood.pythonanywhere.com/api/v1.1/categories/`
   );
   const categories = await res.json();
   return {
